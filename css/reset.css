@@ -68,3 +68,7 @@ legend.legend {
 	border-color: initial;
 	border-image: initial;
 }
+
+p {
+	margin: 0;
+}

@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio Player</title>
+    <meta name="description" content="Audio Player with sort and filtering ability">
+    <meta name="author" content="Olha Holovina">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <header class="page-header">
+      <a href="index.html" class="logo">NFT World<!-- Site logo --></a>
+
+      <!-- Navigation menu and toggle button (non-functional) -->
+      <button type="button" class="nav-toggle">
+        <span class="material-icons">menu</span>
+      </button>
+      <nav aria-label="Primary" class="navigation">
+        <ul class="menu">
+          <li><a href="#">Shop</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Search for a song -->
+      <form class="search">
+        <label>Search
+          <input type="search" name="find" id="find">
+        </label>
+        <button type="button"><span class="material-icons">search</span></button>
+      </form>
+
+      <!-- Additional links -->
+      <ul class="your-products">
+        <li><a href="#"><span class="material-icons" aria-label="Favourites">favorite_border</span></a></li>
+        <li><a href="#"><span class="material-icons" aria-label="Items in your cart">shopping_cart</span></a></li>
+      </ul>
+    </header>
+
+    <main class="products">
+      <header class="heading">
+        <h1>Available for purchase</h1>
+      </header>
+
+      <!-- Filtering product form -->
+      <form class="filters">
+        <h2>Filters</h2>
+
+        <fieldset>
+          <legend hidden>Display Order</legend>
+          <label for="searchName">Name</label>
+          <input type="search" name="searchName" id="searchName">
+        </fieldset>
+        <fieldset>
+          <legend hidden>Display Order</legend>
+          <label for="searchSort">Sort</label>
+          <select name="searchSort" id="searchSort">
+            <option value="price-high">Price, highest to lowest</option>
+            <option value="price-low">Price, lowest to highest</option>
+            <option value="newest">Newest releases</option>
+          </select>
+        </fieldset>
+        <fieldset>
+          <legend hidden>Layout View</legend>
+          <ul class="filter-list">
+            <li>
+              <input type="radio" name="rating" value="4" id="aboveFour">
+              <label for="aboveFour">
+                <span class="material-icons">view_compact_alt</span>
+              </label>
+            </li>
+            <li>
+              <input type="radio" name="rating" value="3" id="aboveThree">
+              <label for="aboveThree">
+                <span class="material-icons">view_agenda</span>
+              </label>
+            </li>
+          </ul>
+        </fieldset>
+      </form>
+
+      <section class="results">
+        <h2 class="subheading">6 results</h2>
+
+        <!-- Product 1 -->
+        <article class="product">
+          <header>
+            <img src="img/1.png" alt="Product Image">
+            <h3>Crypto Punk #1234</h3>
+            <data value="1.2"><span class="material-icons">diamond</span>ETH <del>11.2</del> <ins>9.9</ins></data>
+            <p>Here is a shot of this product that might entice a user to click and add it to their cart.</p>
+            <dl>
+              <dt>Rating</dt>
+              <dd>4.4 <span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star_half</span></dd>
+            </dl>
+            <a href="#">see more</a>
+          </header>
+          <footer>
+            <button type="button"><span class="material-icons">add_shopping_cart</span> Add to Cart</button>
+            <button type="button"><span class="material-icons">favorite</span></button>
+          </footer>
+        </article>
+
+        <!-- Product 2 -->
+        <article class="product">
+          <header>
+            <img src="img/2.png" alt="Product Image">
+            <h3>Crypto Punk #345</h3>
+            <data value="39"><span class="material-icons">diamond</span>ETH 9.8</data>
+            <p>Here is a shot of this product that might entice a user to click and add it to their cart.</p>
+            <dl>
+              <dt>Rating</dt>
+              <dd>4.4 <span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star_half</span></dd>
+            </dl>
+            <a href="#">see more</a>
+          </header>
+          <footer>
+            <button type="button"><span class="material-icons">add_shopping_cart</span> Add to Cart</button>
+            <button type="button"><span class="material-icons">favorite</span></button>
+          </footer>
+        </article>
+
+        <!-- Product 3 -->
+        <article class="product">
+          <header>
+            <img src="img/3.png" alt="Product Image">
+            <h3>Crypto Punk #2345</h3>
+            <data value="39"><span class="material-icons">diamond</span>ETH 8.5</data>
+            <p>Here is a shot of this product that might entice a user to click and add it to their cart.</p>
+            <dl>
+              <dt>Rating</dt>
+              <dd>4.4 <span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star_half</span></dd>
+            </dl>
+            <a href="#">see more</a>
+          </header>
+          <footer>
+            <button type="button"><span class="material-icons">add_shopping_cart</span> Add to Cart</button>
+            <button type="button"><span class="material-icons">favorite</span></button>
+          </footer>
+        </article>
+  
+        <!-- Product 4 -->
+        <article class="product">
+          <header>
+            <img src="img/4.png" alt="Product Image">
+            <h3>Crypto Punk #3345</h3>
+            <data value="39"><span class="material-icons">diamond</span>ETH <del>12</del> <ins>7.99</ins></data>
+            <p>Here is a shot of this product that might entice a user to click and add it to their cart.</p>
+            <dl>
+              <dt>Rating</dt>
+              <dd>4.4 <span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star_half</span></dd>
+            </dl>
+            <a href="#">see more</a>
+          </header>
+          <footer>
+            <button type="button"><span class="material-icons">add_shopping_cart</span> Add to Cart</button>
+            <button type="button"><span class="material-icons">favorite</span></button>
+          </footer>
+        </article>
+
+        <!-- Product 5 -->
+        <article class="product">
+          <header>
+            <img src="img/5.png" alt="Product Image">
+            <h3>Crypto Punk #4221</h3>
+            <data value="39"><span class="material-icons">diamond</span>ETH <del>9</del> <ins>7.25</ins></data>
+            <p>Here is a shot of this product that might entice a user to click and add it to their cart.</p>
+            <dl>
+              <dt>Rating</dt>
+              <dd>4.4 <span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star_half</span></dd>
+            </dl>
+            <a href="#">see more</a>
+          </header>
+          <footer>
+            <button type="button"><span class="material-icons">add_shopping_cart</span> Add to Cart</button>
+            <button type="button"><span class="material-icons">favorite</span></button>
+          </footer>
+        </article>
+
+        <!-- Product 6 -->
+        <article class="product">
+          <header>
+            <img src="img/6.png" alt="Product Image">
+            <h3>Crypto Punk #136</h3>
+            <data value="39"><span class="material-icons">diamond</span>ETH 6.2</data>
+            <p>Here is a shot of this product that might entice a user to click and add it to their cart.</p>
+            <dl>
+              <dt>Rating</dt>
+              <dd>4.4 <span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star_half</span></dd>
+            </dl>
+            <a href="#">see more</a>
+          </header>
+          <footer>
+            <button type="button"><span class="material-icons">add_shopping_cart</span> Add to Cart</button>
+            <button type="button"><span class="material-icons">favorite</span></button>
+          </footer>
+        </article>
+      </section>
+
+      <nav aria-label="Pagination" class="pagination">
+        <p>1-6 of 23 products found</p>
+        <ol class="pages">
+          <li><a href="#" aria-label="Current Page, Page 1" aria-current="true">1</a></li>
+          <li><a href="#" aria-label="Page 2">2</a></li>
+          <li><a href="#" aria-label="Page 3">3</a></li>
+          <li><a href="#" aria-label="Page 4">4</a></li>
+          <li><a href="#" aria-label="Page 5">5</a></li>
+        </ol>
+      </nav>
+    </main>
+
+    <footer class="page-footer">
+      <ul class="social">
+        <li><a href="#"><span class="material-icons">face</span> Facebook</a></li>
+        <li><a href="#"><span class="material-icons">camera_alt</span> Instagram</a></li>
+        <li><a href="#"><span class="material-icons">alternate_email</span> Twitter</a></li>
+      </ul>
+      <nav aria-label="Legal">
+        <ul class="legal">
+          <li><a href="#">Terms of Use</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Accessibility Policy</a></li>
+        </ul>
+      </nav>
+      <p class="copyright">&copy; Copyright, 1991.</p>
+    </footer>
+
+  </body>
+</html>

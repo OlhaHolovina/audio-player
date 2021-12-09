@@ -4,7 +4,7 @@
 }
 
 body {
-
+  font-family: 'Montserrat', sans-serif;
 }
 
 /*site header*/
@@ -31,6 +31,7 @@ body {
 .song-header {
   height: 265px;
   position: center;
+  font-family: 'Gothic A1', sans-serif;
 }
 
 .song-header img {
@@ -43,7 +44,7 @@ body {
 
 .song-info {
   padding-top: 130px;
-  padding-left: 8%;
+  padding-left: 90px;
 }
 
 .song-info .artist {

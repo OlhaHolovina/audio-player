@@ -1,1 +1,22 @@
-/* Note there a few "reset" styles given in reset.css. Review those before you begin */
+body {
+
+}
+
+/*site header*/
+.page-header {
+  padding-top: 30px;
+  display: flex;
+  justify-content: space-between
+}
+
+.logo {
+  padding-left: 90px;
+  color: #12B2CB;
+  font-size: 20px;
+  text-transform: lowercase;
+  text-decoration: none;
+}
+
+.search {
+  padding-right: 150px;
+}

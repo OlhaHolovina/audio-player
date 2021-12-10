@@ -72,3 +72,8 @@ legend.legend {
 p, h1, h2, h3, h4, h5, figure {
 	margin: 0;
 }
+
+button {
+	background: none;
+	border: none;
+}

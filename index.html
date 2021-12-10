@@ -39,43 +39,47 @@
         </section>
       </header>
 
-      <!-- Filtering product form -->
-      <form class="filters">
-        <h2>Filters</h2>
-
-        <fieldset>
-          <legend hidden>Display Order</legend>
-          <label for="searchName">Name</label>
-          <input type="search" name="searchName" id="searchName">
-        </fieldset>
-        <fieldset>
-          <legend hidden>Display Order</legend>
-          <label for="searchSort">Sort</label>
-          <select name="searchSort" id="searchSort">
-            <option value="price-high">Price, highest to lowest</option>
-            <option value="price-low">Price, lowest to highest</option>
-            <option value="newest">Newest releases</option>
-          </select>
-        </fieldset>
-      </form>
-
-      <section class="results">
-<!--        <h2 class="subheading">6 results</h2>-->
-
-        <article class="product">
-          <header>
-            <img src="img/3.png" alt="Product Image">
-            <h3>Crypto Punk #2345</h3>
-            <p>Here is a shot of this product that might entice a user to click and add it to their cart.</p>
-            <dl>
-              <dt>Rating</dt>
-              <dd>4.4 <span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star_half</span></dd>
-            </dl>
-          </header>
-          <footer>
-            <button type="button"><span class="material-icons">favorite</span></button>
-          </footer>
-        </article>
+      <!--playlist-wrapper-->
+      <section class="playlist-wrapper">
+        <!--player and songs list*-->
+        <section class="play-section">
+          <figure class="player">
+            <figcaption>My playlist</figcaption>
+            <audio
+                controls
+                src="/media/cc0-audio/t-rex-roar.mp3">
+              Your browser does not support the
+              <code>audio</code> element.
+            </audio>
+          </figure>
+          <table class="playlist">
+            <tr>
+              <th></th>
+              <th>artist</th>
+              <th>title</th>
+              <th>time</th>
+              <th>genre</th>
+              <th>favorite</th>
+            </tr>
+            <tr>
+              <td>
+                <img class="song-img" src="img/song-img-example.jpg" alt="song image">
+              </td>
+              <td>triangle sun</td>
+              <td>karelia</td>
+              <td>5:25</td>
+              <td>ambient</td>
+              <td>
+                <button type="button"><span class="material-icons">favorite_border</span></button>
+                <button type="button"><span class="material-icons">favorite</span></button>
+              </td>
+            </tr>
+          </table>
+        </section>
+        <section class="info-section">
+          <section class="filters">filters</section>
+          <section class="last-song">last-song</section>
+        </section>
       </section>
 
     </main>

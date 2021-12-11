@@ -1,6 +1,6 @@
 const state = {
   search: '',
-  activeSong: '7',
+  activeSong: '8',
   activeFilter: '',
   activeSorting: '',
   sorting: [
@@ -102,7 +102,18 @@ const state = {
       favorite: false,
       show: true,
     },
-
+    {
+      id: '8',
+      media: '/media/schiller-life-i-feel-you-feat-heppner.mp3',
+      previewSrc: 'img/preview/schiller-life-i-feel-you-cover.jpg',
+      songImgSrc: 'img/main/schiller-life-i-feel-you-pict.jpg',
+      artist: 'Schiller',
+      title: 'Life... I feel you',
+      time: '3: 49',
+      genre: 'Ambient, electronic',
+      favorite: false,
+      show: true,
+    },
   ],
 }
 

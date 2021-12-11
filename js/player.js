@@ -1,6 +1,6 @@
 const state = {
   search: '',
-  activeSong: '9',
+  activeSong: '10',
   activeFilter: '',
   activeSorting: '',
   sorting: [
@@ -126,10 +126,20 @@ const state = {
       favorite: false,
       show: true,
     },
+    {
+      id: '10',
+      media: '/media/triangle-sun-karelia.mp3',
+      previewSrc: 'img/preview/triangle-sun-karelia-cover.jpg',
+      songImgSrc: 'img/main/triangle-sun-karelia-pict.jpg',
+      artist: 'Triangle Sun',
+      title: 'Karelia',
+      time: '6: 41',
+      genre: 'Ambient, instrumental',
+      favorite: false,
+      show: true,
+    },
   ],
 }
-
-// Triangle Sun - Karelia - Ambient, instrumental
 
 // get all elements once
 const filterEl = document.querySelector('.filters');

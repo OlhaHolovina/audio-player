@@ -28,7 +28,8 @@ const state = {
       time: '3: 23',
       genre: 'Rock, Alternative rock',
       favorite: false,
-      active: false
+      active: false,
+      show: true
     },
     {
       id: '2',
@@ -40,7 +41,8 @@ const state = {
       time: '3: 23',
       genre: 'Rock, Alternative rock',
       favorite: false,
-      active: false
+      active: false,
+      show: true,
     },
   ],
 }
@@ -139,7 +141,9 @@ function repaintSongs(songs, activeSong){
     // todo on click
     // todo set active class
     // todo set is favorite
-    playlistEl.innerHTML += `
+
+    if (song.show){
+      playlistEl.innerHTML += `
               <tr>
                 <td class="song-img">
                   <img src="${song.previewSrc}" alt="${song.artist} ${song.title}">
@@ -153,6 +157,7 @@ function repaintSongs(songs, activeSong){
                   <button type="button"><span class="material-icons">favorite</span></button>
                 </td>
               </tr>`;
+    }
   });
 }
 window.addEventListener('load', initPlayer);

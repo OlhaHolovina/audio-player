@@ -1,6 +1,6 @@
 const state = {
   search: '',
-  activeSong: '2',
+  activeSong: '1',
   activeFilter: '',
   activeSorting: '',
   sorting: [
@@ -28,7 +28,6 @@ const state = {
       time: '3: 23',
       genre: 'Rock, Alternative rock',
       favorite: false,
-      active: false,
       show: true
     },
     {
@@ -41,7 +40,6 @@ const state = {
       time: '3: 23',
       genre: 'Rock, Alternative rock',
       favorite: false,
-      active: false,
       show: true,
     },
   ],
@@ -143,8 +141,9 @@ function repaintSongs(songs, activeSong){
     // todo set is favorite
 
     if (song.show){
+      const isActive = activeSong === song.id;
       playlistEl.innerHTML += `
-              <tr>
+              <tr class="${isActive ? 'active' : ''}">
                 <td class="song-img">
                   <img src="${song.previewSrc}" alt="${song.artist} ${song.title}">
                 </td>

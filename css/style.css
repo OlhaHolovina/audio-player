@@ -149,6 +149,9 @@ td.song-img img{
   font-weight: bold;
 }
 
+.playlist .active {
+  color: red;
+}
 /*filters and sorting*/
 .actions-section{
   width: 30%;

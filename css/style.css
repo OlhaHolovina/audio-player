@@ -124,7 +124,7 @@ td.song-img {
 td.song-img img{
   width: 100px;
   height: 50px;
-  object-fit: contain;
+  object-fit: cover;
 }
 
 /*playlist*/

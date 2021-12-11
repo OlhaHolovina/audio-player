@@ -1,6 +1,6 @@
 const state = {
   search: '',
-  activeSong: '1',
+  activeSong: '2',
   activeFilter: '',
   activeSorting: '',
   sorting: [
@@ -8,7 +8,6 @@ const state = {
     {id: '2',name: 'genre', active: false},
     {id: '3',name: 'favorite', active: false},
     {id: '4',name: 'song', active: false},
-    {id: '5',name: 'time', active: false},
   ],
   filters: [
     {id: '1', name: 'ambient', active: false},
@@ -21,6 +20,18 @@ const state = {
   songs: [
     {
       id: '1',
+      media: '/media/imagine-dragons-believer.mp3',
+      previewSrc: 'img/preview/imagine-dragons-believer-cover.jpg',
+      songImgSrc: 'img/main/imagine-dragons-believer-pict.jpg',
+      artist: 'Imagine Dragons',
+      title: 'Believer',
+      time: '3: 23',
+      genre: 'Rock, Alternative rock',
+      favorite: false,
+      active: false
+    },
+    {
+      id: '2',
       media: '/media/imagine-dragons-believer.mp3',
       previewSrc: 'img/preview/imagine-dragons-believer-cover.jpg',
       songImgSrc: 'img/main/imagine-dragons-believer-pict.jpg',
@@ -47,7 +58,7 @@ const state = {
 // get all elements once
 const filterEl = document.querySelector('.filters');
 const sortingEl = document.querySelector('.sorting');
-const songsEl = document.querySelector('.songs');
+const playlistEl = document.querySelector('.playlist');
 const audioEl = document.querySelector('.audio');
 const songHeader = document.querySelector('.song-header');
 
@@ -115,23 +126,33 @@ function repaintSorting(sorting){
 }
 
 function repaintSongs(songs, activeSong){
-  songsEl.innerHTML = '';
+  playlistEl.innerHTML = `
+              <tr>
+              <th></th>
+              <th>artist</th>
+              <th>title</th>
+              <th>time</th>
+              <th>genre</th>
+              <th>favorite</th>
+            </tr>`;
   songs.forEach(song => {
     // todo on click
     // todo set active class
     // todo set is favorite
-    songsEl.innerHTML += `
-              <td class="song-img">
-                <img src="${song.previewSrc}" alt="${song.artist} ${song.title}">
-              </td>
-              <td class="song-artist">${song.artist}</td>
-              <td>${song.title}</td>
-              <td>${song.time}</td>
-              <td>${song.genre}</td>
-              <td>
-<!--                <button type="button"><span class="material-icons">favorite_border</span></button>-->
-                <button type="button"><span class="material-icons">favorite</span></button>
-              </td>`;
+    playlistEl.innerHTML += `
+              <tr>
+                <td class="song-img">
+                  <img src="${song.previewSrc}" alt="${song.artist} ${song.title}">
+                </td>
+                <td class="song-artist">${song.artist}</td>
+                <td>${song.title}</td>
+                <td>${song.time}</td>
+                <td>${song.genre}</td>
+                <td>
+                  <!--<button type="button"><span class="material-icons">favorite_border</span></button>-->
+                  <button type="button"><span class="material-icons">favorite</span></button>
+                </td>
+              </tr>`;
   });
 }
 window.addEventListener('load', initPlayer);

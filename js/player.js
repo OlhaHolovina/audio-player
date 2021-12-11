@@ -1,6 +1,6 @@
 const state = {
   search: '',
-  activeSong: '2',
+  activeSong: '3',
   activeFilter: '',
   activeSorting: '',
   sorting: [
@@ -42,11 +42,21 @@ const state = {
       favorite: false,
       show: true,
     },
+    {
+      id: '3',
+      media: '/media/imagine-dragons-radioactive.mp3',
+      previewSrc: 'img/preview/imagine-dragons-radioactive-cover.jpg',
+      songImgSrc: 'img/main/imagine-dragons-radioactive-pict.jpg',
+      artist: 'Imagine Dragons',
+      title: 'Radioactive',
+      time: '3: 08',
+      genre: 'Rock, Alternative rock',
+      favorite: false,
+      show: true,
+    },
   ],
 }
 
-// Imagine Dragons - Radioactive - Rock, Alternative rock
-// Imagine Dragons - Natural - Rock, Alternative rock
 // Tim Curry - I put a spell on you - Rock
 // Syberian beast meets Mr. Moore - Wien - Dubstep, electronic
 // The Killers - Somebody told me - Rock, Pop Rock

@@ -28,6 +28,10 @@ body {
 .search {
   padding-right: 150px;
 }
+
+.search .material-icons {
+  color: var(--grey);
+}
 #search {
   border: none;
   background-color: transparent;

@@ -65,7 +65,7 @@ function showErrorMessage(message){
 function setActiveSong(id, songs){
   const activeSong = songs.find(song => song.id === id);
   if (!activeSong) {
-    showErrorMessage('something wrong with songs list!');
+    showErrorMessage('something wrong with the songs list!');
   }
 
   audioEl.innerHTML = `

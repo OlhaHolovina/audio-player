@@ -1,6 +1,7 @@
 :root {
   --blue: #12B2CB;
   --white: #fff;
+  --grey: #cccbcb;
 }
 
 body {
@@ -23,8 +24,26 @@ body {
   text-decoration: none;
 }
 
+/*search*/
 .search {
   padding-right: 150px;
+}
+#search {
+  border: none;
+  background-color: transparent;
+  border-bottom: 2px solid var(--grey);
+  font-weight: 100;
+}
+
+#search:focus{
+  outline: none;
+  border-bottom: 2px solid black;
+}
+
+.search .material-icons {
+  font-size: 30px;
+  vertical-align: text-bottom;
+  cursor: pointer;
 }
 
 /*song-header*/
@@ -151,7 +170,7 @@ td.song-img img{
 }
 ul.filters {
   padding-bottom: 20px;
-  border-bottom: 2px solid #cccbcb;
+  border-bottom: 2px solid var(--grey);
 }
 .filters li {
   padding: 10px 20px;

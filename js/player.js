@@ -1,6 +1,6 @@
 const state = {
   search: '',
-  activeSong: '1',
+  activeSong: '2',
   activeFilter: '',
   activeSorting: '',
   sorting: [
@@ -32,12 +32,12 @@ const state = {
     },
     {
       id: '2',
-      media: '/media/imagine-dragons-believer.mp3',
-      previewSrc: 'img/preview/imagine-dragons-believer-cover.jpg',
-      songImgSrc: 'img/main/imagine-dragons-believer-pict.jpg',
+      media: '/media/imagine-dragons-natural.mp3',
+      previewSrc: 'img/preview/imagine-dragons-natural-cover.jpg',
+      songImgSrc: 'img/main/imagine-dragons-natural-pict.jpg',
       artist: 'Imagine Dragons',
-      title: 'Believer',
-      time: '3: 23',
+      title: 'Natural',
+      time: '3: 08',
       genre: 'Rock, Alternative rock',
       favorite: false,
       show: true,

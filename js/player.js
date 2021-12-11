@@ -1,6 +1,6 @@
 const state = {
   search: '',
-  activeSong: '3',
+  activeSong: '4',
   activeFilter: '',
   activeSorting: '',
   sorting: [
@@ -51,6 +51,18 @@ const state = {
       title: 'Radioactive',
       time: '3: 08',
       genre: 'Rock, Alternative rock',
+      favorite: false,
+      show: true,
+    },
+    {
+      id: '4',
+      media: '/media/tim-curry-I-put-a-spell-on-you.mp3',
+      previewSrc: 'img/preview/tim-curry-I-put-a-spell-on-you-cover.jpg',
+      songImgSrc: 'img/main/tim-curry-I-put-a-spell-on-you-pict.jpg',
+      artist: 'Tim Curry',
+      title: 'I putt a spell on you',
+      time: '3: 35',
+      genre: 'Rock',
       favorite: false,
       show: true,
     },

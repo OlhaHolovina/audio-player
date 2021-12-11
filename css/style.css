@@ -162,6 +162,16 @@ ul.filters {
   border: 2px solid black;
   cursor: pointer;
 }
+
+.sorting {
+  width: 70%;
+}
+.sorting li {
+  border-radius: 20px;
+  margin-right: 45px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
 .filters-wrapper h4, .last-song-section h4 {
   color: var(--blue);
   text-transform: uppercase;

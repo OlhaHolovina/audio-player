@@ -1,6 +1,6 @@
 const state = {
   search: '',
-  activeSong: '4',
+  activeSong: '7',
   activeFilter: '',
   activeSorting: '',
   sorting: [
@@ -66,13 +66,46 @@ const state = {
       favorite: false,
       show: true,
     },
+    {
+      id: '5',
+      media: '/media/syberian-beast-meets-mr-moore-wien.mp3',
+      previewSrc: 'img/preview/syberian-beast-wien-cover.jpg',
+      songImgSrc: 'img/main/syberian-beast-wien-pict.jpg',
+      artist: 'Syberian beast',
+      title: 'Wien',
+      time: '3: 38',
+      genre: 'Dubstep, electronic',
+      favorite: false,
+      show: true,
+    },
+    {
+      id: '6',
+      media: '/media/the-killers-somebody-told-me.mp3',
+      previewSrc: 'img/preview/the-killers-sombody-told-me-cover.jpg',
+      songImgSrc: 'img/main/the-killers-sombody-told-me-pict.jpg',
+      artist: 'The Killers',
+      title: 'Somebody told me',
+      time: '3: 21',
+      genre: 'Rock, Pop Rock',
+      favorite: false,
+      show: true,
+    },
+    {
+      id: '7',
+      media: '/media/leroy-good time.mp3',
+      previewSrc: 'img/preview/leroy-good-time-cover.jpg',
+      songImgSrc: 'img/main/leroy-good-time-pict.jpg',
+      artist: 'Leroy',
+      title: 'Good time',
+      time: '3: 30',
+      genre: 'Rock',
+      favorite: false,
+      show: true,
+    },
+
   ],
 }
 
-// Tim Curry - I put a spell on you - Rock
-// Syberian beast meets Mr. Moore - Wien - Dubstep, electronic
-// The Killers - Somebody told me - Rock, Pop Rock
-// Leroy - Good time - Rock
 // Schiller - Life... I feel you - Ambient, electronic
 // Schiller - What's coming - Ambient, electronic
 // Triangle Sun - Karelia - Ambient, instrumental

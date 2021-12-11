@@ -1,6 +1,6 @@
 const state = {
   search: '',
-  activeSong: '8',
+  activeSong: '9',
   activeFilter: '',
   activeSorting: '',
   sorting: [
@@ -114,11 +114,21 @@ const state = {
       favorite: false,
       show: true,
     },
+    {
+      id: '9',
+      media: '/media/schiller-whats-coming.mp3',
+      previewSrc: 'img/preview/schiller-whats-coming-cover.jpg',
+      songImgSrc: 'img/main/schiller-whats-coming-pict.jpg',
+      artist: 'Schiller',
+      title: 'What\'s coming',
+      time: '4: 26',
+      genre: 'Ambient, electronic',
+      favorite: false,
+      show: true,
+    },
   ],
 }
 
-// Schiller - Life... I feel you - Ambient, electronic
-// Schiller - What's coming - Ambient, electronic
 // Triangle Sun - Karelia - Ambient, instrumental
 
 // get all elements once

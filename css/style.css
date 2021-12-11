@@ -90,6 +90,10 @@ body {
   font-weight: 600;
 }
 
+.player audio {
+  width: 80%;
+}
+
 .info-section{
   width: 30%;
 }

@@ -48,6 +48,8 @@ const state = {
 const filterEl = document.querySelector('.filters');
 const sortingEl = document.querySelector('.sorting');
 const songsEl = document.querySelector('.songs');
+const audioEl = document.querySelector('.audio');
+const songHeader = document.querySelector('.song-header');
 
 function initPlayer(){
   // todo request for songs
@@ -55,15 +57,40 @@ function initPlayer(){
   repaintPlayer(state);
 }
 
-function setActiveSong(id){
+function showErrorMessage(message){
+  alert(message);
+  console.error(message);
+}
 
+function setActiveSong(id, songs){
+  const activeSong = songs.find(song => song.id === id);
+  if (!activeSong) {
+    showErrorMessage('something wrong with songs list!');
+  }
+
+  audioEl.innerHTML = `
+      <source src="${activeSong.media}" type="audio/mpeg">
+      <p>Your browser doesn't support HTML5 audio. Here is a 
+      <a href="${activeSong.media}">link to the audio</a> instead.</p>
+  `;
+
+  songHeader.innerHTML = `
+      <img src="${activeSong.songImgSrc}" alt="${activeSong.artist} ${activeSong.title}">
+      <section class="song-info">
+        <h2>
+          <span class="artist">${activeSong.artist}</span>
+          <span class="name">${activeSong.title}</span>
+        </h2>
+        <h4 class="genre">${activeSong.genre}</h4>
+      </section>
+  `;
 }
 
 function repaintPlayer(state){
   repaintFilters(state.filters);
   repaintSorting(state.sorting);
   repaintSongs(state.songs, state.activeSong);
-  setActiveSong(state);
+  setActiveSong(state.activeSong, state.songs);
   // todo add songs
   // todo add search
 }

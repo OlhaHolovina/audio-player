@@ -1,18 +1,18 @@
 const state = {
   search: '',
   sorting: [
-    {id: '1',name: 'artist', active: false},
-    {id: '2',name: 'genre', active: false},
-    {id: '3',name: 'favorite', active: false},
-    {id: '4',name: 'song', active: false},
+    {id: 'sorting-1',name: 'artist', active: false},
+    {id: 'sorting-2',name: 'genre', active: false},
+    {id: 'sorting-3',name: 'favorite', active: false},
+    {id: 'sorting-4',name: 'song', active: false},
   ],
   filters: [
-    {id: '1', name: 'ambient', active: false},
-    {id: '2', name: 'lounge', active: false},
-    {id: '3', name: 'pop', active: false},
-    {id: '4', name: 'rock', active: false},
-    {id: '5', name: 'instrumental', active: false},
-    {id: '6', name: 'vocal', active: false},
+    {id: 'filter-1', name: 'ambient', active: false},
+    {id: 'filter-2', name: 'lounge', active: false},
+    {id: 'filter-3', name: 'pop', active: false},
+    {id: 'filter-4', name: 'rock', active: false},
+    {id: 'filter-5', name: 'instrumental', active: false},
+    {id: 'filter-6', name: 'vocal', active: false},
   ],
   songs: [
     {
@@ -148,12 +148,39 @@ const state = {
   ],
 }
 
+// listeners
+function filterOnClick(e){
+  state.filters = state.filters.map(filter => {
+    if (e.target.id === filter.id) {
+      filter.active = true;
+    } else {
+      filter.active = false;
+    }
+
+    return filter;
+  });
+
+  const filter = state.filters.find(filter => filter.id === e.target.id);
+  state.songs = state.songs.map(song => {
+    if (song.genre.includes(filter.name)) {
+      song.show = true;
+    } else {
+      song.show = false;
+    }
+    return song;
+  });
+  repaintPlayer(state);
+}
+
 // get all elements once
 const filterEl = document.querySelector('.filters');
 const sortingEl = document.querySelector('.sorting');
 const playlistEl = document.querySelector('.playlist');
 const audioEl = document.querySelector('.audio');
 const songHeader = document.querySelector('.song-header');
+
+// adding listeners
+filterEl.addEventListener('click', filterOnClick);
 
 function initPlayer(){
   // todo request for songs
@@ -196,17 +223,13 @@ function repaintPlayer(state){
   repaintSorting(state.sorting);
   repaintSongs(state.songs);
   setActiveSong(state.songs);
-  // todo add songs
   // todo add search
 }
 
 function repaintFilters(filters){
   filterEl.innerHTML = '';
   filters.forEach(filter => {
-    // todo on click
-    // todo set active class
-
-    filterEl.innerHTML += `<li>${filter.name}</li>`;
+    filterEl.innerHTML += `<li class="${filter.active ? 'active' : ''}" id="${filter.id}">${filter.name}</li>`;
   });
 }
 

@@ -189,6 +189,10 @@ ul.filters {
   cursor: pointer;
 }
 
+.filters .active {
+  background: var(--grey);
+}
+
 .sorting {
   width: 70%;
 }

@@ -313,4 +313,6 @@ function repaintSongs(songs){
     }
   });
 }
+
+// when page is loaded init the player
 window.addEventListener('load', initPlayer);

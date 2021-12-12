@@ -56,8 +56,8 @@ const state = {
     {
       id: '4',
       media: 'https://raw.githubusercontent.com/OlhaHolovina/audio-player/main/media/tim-curry-I-put-a-spell-on-you.mp3',
-      previewSrc: 'img/preview/tim-curry-I-put-a-spell-on-you-cover.jpg',
-      songImgSrc: 'img/main/tim-curry-I-put-a-spell-on-you-pict.jpg',
+      previewSrc: 'https://raw.githubusercontent.com/OlhaHolovina/audio-player/main/img/preview/tim-curry-I-put-a-spell-on-you-cover.jpg',
+      songImgSrc: 'https://raw.githubusercontent.com/OlhaHolovina/audio-player/main/img/main/tim-curry-I-put-a-spell-on-you-pict.jpg',
       artist: 'Tim Curry',
       title: 'I putt a spell on you',
       time: '3: 35',

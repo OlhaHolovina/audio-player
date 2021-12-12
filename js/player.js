@@ -16,7 +16,7 @@ const state = {
   songs: [
     {
       id: '1',
-      media: 'media/imagine-dragons-believer.mp3',
+      media: 'https://raw.githubusercontent.com/OlhaHolovina/audio-player/main/media/imagine-dragons-believer.mp3',
       previewSrc: 'img/preview/imagine-dragons-believer-cover.jpg',
       songImgSrc: 'img/main/imagine-dragons-believer-pict.jpg',
       artist: 'Imagine Dragons',
@@ -29,7 +29,7 @@ const state = {
     },
     {
       id: '2',
-      media: 'media/imagine-dragons-natural.mp3',
+      media: 'https://raw.githubusercontent.com/OlhaHolovina/audio-player/main/media/imagine-dragons-natural.mp3',
       previewSrc: 'img/preview/imagine-dragons-natural-cover.jpg',
       songImgSrc: 'img/main/imagine-dragons-natural-pict.jpg',
       artist: 'Imagine Dragons',

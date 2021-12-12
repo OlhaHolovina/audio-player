@@ -95,8 +95,8 @@ const state = {
     {
       id: '7',
       media: 'https://raw.githubusercontent.com/OlhaHolovina/audio-player/main/media/leroy-good time.mp3',
-      previewSrc: 'img/preview/leroy-good-time-cover.jpg',
-      songImgSrc: 'img/main/leroy-good-time-pict.jpg',
+      previewSrc: 'https://raw.githubusercontent.com/OlhaHolovina/audio-player/main/img/preview/leroy-good-time-cover.jpg',
+      songImgSrc: 'https://raw.githubusercontent.com/OlhaHolovina/audio-player/main/img/main/leroy-good-time-pict.jpg',
       artist: 'Leroy',
       title: 'Good time',
       time: '3: 30',

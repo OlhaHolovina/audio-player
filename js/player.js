@@ -164,7 +164,7 @@ function filterOnClick(e){
     return showErrorMessage('something wrong with the filter!');
   }
   state.songs = state.songs.map(song => {
-    if (song.genre.includes(filter.name)) {
+    if (song.genre.toLowerCase().includes(filter.name.toLowerCase())) {
       song.show = true;
     } else {
       song.show = false;

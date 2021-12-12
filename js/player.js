@@ -29,7 +29,7 @@ const state = {
     },
     {
       id: '2',
-      media: '/media/imagine-dragons-natural.mp3',
+      media: 'media/imagine-dragons-natural.mp3',
       previewSrc: 'img/preview/imagine-dragons-natural-cover.jpg',
       songImgSrc: 'img/main/imagine-dragons-natural-pict.jpg',
       artist: 'Imagine Dragons',
@@ -42,7 +42,7 @@ const state = {
     },
     {
       id: '3',
-      media: '/media/imagine-dragons-radioactive.mp3',
+      media: 'media/imagine-dragons-radioactive.mp3',
       previewSrc: 'img/preview/imagine-dragons-radioactive-cover.jpg',
       songImgSrc: 'img/main/imagine-dragons-radioactive-pict.jpg',
       artist: 'Imagine Dragons',
@@ -55,7 +55,7 @@ const state = {
     },
     {
       id: '4',
-      media: '/media/tim-curry-I-put-a-spell-on-you.mp3',
+      media: 'media/tim-curry-I-put-a-spell-on-you.mp3',
       previewSrc: 'img/preview/tim-curry-I-put-a-spell-on-you-cover.jpg',
       songImgSrc: 'img/main/tim-curry-I-put-a-spell-on-you-pict.jpg',
       artist: 'Tim Curry',
@@ -68,7 +68,7 @@ const state = {
     },
     {
       id: '5',
-      media: '/media/syberian-beast-meets-mr-moore-wien.mp3',
+      media: 'media/syberian-beast-meets-mr-moore-wien.mp3',
       previewSrc: 'img/preview/syberian-beast-wien-cover.jpg',
       songImgSrc: 'img/main/syberian-beast-wien-pict.jpg',
       artist: 'Syberian beast',
@@ -81,7 +81,7 @@ const state = {
     },
     {
       id: '6',
-      media: '/media/the-killers-somebody-told-me.mp3',
+      media: 'media/the-killers-somebody-told-me.mp3',
       previewSrc: 'img/preview/the-killers-sombody-told-me-cover.jpg',
       songImgSrc: 'img/main/the-killers-sombody-told-me-pict.jpg',
       artist: 'The Killers',
@@ -94,7 +94,7 @@ const state = {
     },
     {
       id: '7',
-      media: '/media/leroy-good time.mp3',
+      media: 'media/leroy-good time.mp3',
       previewSrc: 'img/preview/leroy-good-time-cover.jpg',
       songImgSrc: 'img/main/leroy-good-time-pict.jpg',
       artist: 'Leroy',
@@ -107,7 +107,7 @@ const state = {
     },
     {
       id: '8',
-      media: '/media/schiller-life-i-feel-you-feat-heppner.mp3',
+      media: 'media/schiller-life-i-feel-you-feat-heppner.mp3',
       previewSrc: 'img/preview/schiller-life-i-feel-you-cover.jpg',
       songImgSrc: 'img/main/schiller-life-i-feel-you-pict.jpg',
       artist: 'Schiller',
@@ -120,7 +120,7 @@ const state = {
     },
     {
       id: '9',
-      media: '/media/schiller-whats-coming.mp3',
+      media: 'media/schiller-whats-coming.mp3',
       previewSrc: 'img/preview/schiller-whats-coming-cover.jpg',
       songImgSrc: 'img/main/schiller-whats-coming-pict.jpg',
       artist: 'Schiller',
@@ -133,7 +133,7 @@ const state = {
     },
     {
       id: '10',
-      media: '/media/triangle-sun-karelia.mp3',
+      media: 'media/triangle-sun-karelia.mp3',
       previewSrc: 'img/preview/triangle-sun-karelia-cover.jpg',
       songImgSrc: 'img/main/triangle-sun-karelia-pict.jpg',
       artist: 'Triangle Sun',

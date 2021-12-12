@@ -161,6 +161,9 @@ function filterOnClick(e){
   });
 
   const filter = state.filters.find(filter => filter.id === e.target.id);
+  if (!filter) {
+    return showErrorMessage('something wrong with the filter!');
+  }
   state.songs = state.songs.map(song => {
     if (song.genre.includes(filter.name)) {
       song.show = true;

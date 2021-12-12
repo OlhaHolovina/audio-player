@@ -204,7 +204,7 @@ ul.filters {
 }
 
 .sorting .active {
-  font-weight: bold;
+  color: grey;
 }
 .filters-wrapper h4, .last-song-section h4 {
   color: var(--blue);

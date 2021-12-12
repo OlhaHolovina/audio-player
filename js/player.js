@@ -188,16 +188,8 @@ function sortOnClick(e){
   if (!sortItem) {
     return showErrorMessage('something wrong with the sorting!');
   }
-  state.songs = state.songs.sort((a, b) => {
-    if ( a[name] < b[name] ){
-      return -1;
-    }
-    if ( a[name]> b[name]){
-      return 1;
-    }
-    return 0;
-  });
 
+  state.songs.sort((a, b) => a[sortItem.name].localeCompare(b[sortItem.name]));
   repaintPlayer(state);
 }
 
@@ -266,7 +258,7 @@ function repaintFilters(filters){
 function repaintSorting(sorting){
   sortingEl.innerHTML = '';
   sorting.forEach(sortItem => {
-    sortingEl.innerHTML += `<li class="${sortItem.active ? 'active' : ''}">${sortItem.name}</li>`;
+    sortingEl.innerHTML += `<li class="${sortItem.active ? 'active' : ''}" id="${sortItem.id}">${sortItem.name}</li>`;
   });
 }
 

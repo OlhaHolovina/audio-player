@@ -1,10 +1,9 @@
 const state = {
   search: '',
   sorting: [
-    {id: 'sorting-1',name: 'artist', active: false},
-    {id: 'sorting-2',name: 'genre', active: false},
-    {id: 'sorting-3',name: 'favorite', active: false},
-    {id: 'sorting-4',name: 'song', active: false},
+    {id: 'sorting-1', name: 'artist', active: false},
+    {id: 'sorting-2', name: 'genre', active: false},
+    {id: 'sorting-4', name: 'title', active: false},
   ],
   filters: [
     {id: 'filter-1', name: 'ambient', active: false},
@@ -175,6 +174,33 @@ function filterOnClick(e){
   repaintPlayer(state);
 }
 
+function sortOnClick(e){
+  state.sorting = state.sorting.map(sortItem => {
+    if (e.target.id === sortItem.id) {
+      sortItem.active = true;
+    } else {
+      sortItem.active = false;
+    }
+    return sortItem;
+  });
+
+  const sortItem = state.sorting.find(sortItem => sortItem.id === e.target.id);
+  if (!sortItem) {
+    return showErrorMessage('something wrong with the sorting!');
+  }
+  state.songs = state.songs.sort((a, b) => {
+    if ( a[name] < b[name] ){
+      return -1;
+    }
+    if ( a[name]> b[name]){
+      return 1;
+    }
+    return 0;
+  });
+
+  repaintPlayer(state);
+}
+
 // get all elements once
 const filterEl = document.querySelector('.filters');
 const sortingEl = document.querySelector('.sorting');
@@ -184,6 +210,7 @@ const songHeader = document.querySelector('.song-header');
 
 // adding listeners
 filterEl.addEventListener('click', filterOnClick);
+sortingEl.addEventListener('click', sortOnClick);
 
 function initPlayer(){
   // todo request for songs
@@ -239,9 +266,7 @@ function repaintFilters(filters){
 function repaintSorting(sorting){
   sortingEl.innerHTML = '';
   sorting.forEach(sortItem => {
-    // todo on click
-    // todo set active class
-    sortingEl.innerHTML += `<li>${sortItem.name}</li>`;
+    sortingEl.innerHTML += `<li class="${sortItem.active ? 'active' : ''}">${sortItem.name}</li>`;
   });
 }
 

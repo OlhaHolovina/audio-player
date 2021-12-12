@@ -202,6 +202,10 @@ ul.filters {
   margin-bottom: 10px;
   cursor: pointer;
 }
+
+.sorting .active {
+  font-weight: bold;
+}
 .filters-wrapper h4, .last-song-section h4 {
   color: var(--blue);
   text-transform: uppercase;

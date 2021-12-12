@@ -152,6 +152,10 @@ td.song-img img{
 .playlist .active {
   color: red;
 }
+
+.playlist .material-icons {
+  cursor: pointer;
+}
 /*filters and sorting*/
 .actions-section{
   width: 30%;

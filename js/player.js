@@ -193,6 +193,23 @@ function sortOnClick(e){
   repaintPlayer(state);
 }
 
+function playOnClick(e){
+  // it's click on something, not on the button
+  if (e.target.className !== 'material-icons') {
+    return;
+  }
+
+  state.songs = state.songs.map(song => {
+    if (song.id === e.target.id) {
+      song.active = true;
+    } else {
+      song.active = false;
+    }
+    return song;
+  });
+  repaintPlayer(state);
+}
+
 // get all elements once
 const filterEl = document.querySelector('.filters');
 const sortingEl = document.querySelector('.sorting');
@@ -203,6 +220,7 @@ const songHeader = document.querySelector('.song-header');
 // adding listeners
 filterEl.addEventListener('click', filterOnClick);
 sortingEl.addEventListener('click', sortOnClick);
+document.querySelector('.playlist').addEventListener('click', playOnClick);
 
 function initPlayer(){
   // todo request for songs
@@ -270,6 +288,7 @@ function repaintSongs(songs){
               <th>title</th>
               <th>time</th>
               <th>genre</th>
+              <th></th>
             </tr>`;
   const atLeast1Song = songs.find(song => song.show);
   if (!atLeast1Song) {
@@ -296,6 +315,7 @@ function repaintSongs(songs){
               <td>${song.title}</td>
               <td>${song.time}</td>
               <td>${song.genre}</td>
+              <td><span class="material-icons" id="${song.id}">play_circle</span></td>
             </tr>`;
     }
   });

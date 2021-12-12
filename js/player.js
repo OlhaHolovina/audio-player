@@ -16,7 +16,7 @@ const state = {
   songs: [
     {
       id: '1',
-      media: '/media/imagine-dragons-believer.mp3',
+      media: 'media/imagine-dragons-believer.mp3',
       previewSrc: 'img/preview/imagine-dragons-believer-cover.jpg',
       songImgSrc: 'img/main/imagine-dragons-believer-pict.jpg',
       artist: 'Imagine Dragons',

@@ -270,7 +270,6 @@ function repaintSongs(songs){
               <th>title</th>
               <th>time</th>
               <th>genre</th>
-              <th>favorite</th>
             </tr>`;
   const atLeast1Song = songs.find(song => song.show);
   if (!atLeast1Song) {
@@ -297,10 +296,6 @@ function repaintSongs(songs){
               <td>${song.title}</td>
               <td>${song.time}</td>
               <td>${song.genre}</td>
-              <td>
-                <!--<button type="button"><span class="material-icons">favorite_border</span></button>-->
-                <button type="button"><span class="material-icons">favorite</span></button>
-              </td>
             </tr>`;
     }
   });

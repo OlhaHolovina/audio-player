@@ -1,8 +1,5 @@
 const state = {
   search: '',
-  activeSong: '10',
-  activeFilter: '',
-  activeSorting: '',
   sorting: [
     {id: '1',name: 'artist', active: false},
     {id: '2',name: 'genre', active: false},
@@ -28,6 +25,7 @@ const state = {
       time: '3: 23',
       genre: 'Rock, Alternative rock',
       favorite: false,
+      active: false,
       show: true
     },
     {
@@ -40,6 +38,7 @@ const state = {
       time: '3: 08',
       genre: 'Rock, Alternative rock',
       favorite: false,
+      active: false,
       show: true,
     },
     {
@@ -52,6 +51,7 @@ const state = {
       time: '3: 08',
       genre: 'Rock, Alternative rock',
       favorite: false,
+      active: false,
       show: true,
     },
     {
@@ -64,6 +64,7 @@ const state = {
       time: '3: 35',
       genre: 'Rock',
       favorite: false,
+      active: false,
       show: true,
     },
     {
@@ -76,6 +77,7 @@ const state = {
       time: '3: 38',
       genre: 'Dubstep, electronic',
       favorite: false,
+      active: false,
       show: true,
     },
     {
@@ -88,6 +90,7 @@ const state = {
       time: '3: 21',
       genre: 'Rock, Pop Rock',
       favorite: false,
+      active: false,
       show: true,
     },
     {
@@ -100,6 +103,7 @@ const state = {
       time: '3: 30',
       genre: 'Rock',
       favorite: false,
+      active: false,
       show: true,
     },
     {
@@ -112,6 +116,7 @@ const state = {
       time: '3: 49',
       genre: 'Ambient, electronic',
       favorite: false,
+      active: false,
       show: true,
     },
     {
@@ -124,6 +129,7 @@ const state = {
       time: '4: 26',
       genre: 'Ambient, electronic',
       favorite: false,
+      active: false,
       show: true,
     },
     {
@@ -136,6 +142,7 @@ const state = {
       time: '6: 41',
       genre: 'Ambient, instrumental',
       favorite: false,
+      active: false,
       show: true,
     },
   ],
@@ -151,6 +158,7 @@ const songHeader = document.querySelector('.song-header');
 function initPlayer(){
   // todo request for songs
   // todo input event listener
+  state.songs[0].active = true;
   repaintPlayer(state);
 }
 
@@ -159,8 +167,8 @@ function showErrorMessage(message){
   console.error(message);
 }
 
-function setActiveSong(id, songs){
-  const activeSong = songs.find(song => song.id === id);
+function setActiveSong(songs){
+  const activeSong = songs.find(song => song.active);
   if (!activeSong) {
     showErrorMessage('something wrong with the songs list!');
   }
@@ -186,8 +194,8 @@ function setActiveSong(id, songs){
 function repaintPlayer(state){
   repaintFilters(state.filters);
   repaintSorting(state.sorting);
-  repaintSongs(state.songs, state.activeSong);
-  setActiveSong(state.activeSong, state.songs);
+  repaintSongs(state.songs);
+  setActiveSong(state.songs);
   // todo add songs
   // todo add search
 }
@@ -211,7 +219,7 @@ function repaintSorting(sorting){
   });
 }
 
-function repaintSongs(songs, activeSong){
+function repaintSongs(songs){
   playlistEl.innerHTML = `
               <tr>
               <th></th>
@@ -227,9 +235,8 @@ function repaintSongs(songs, activeSong){
     // todo set is favorite
 
     if (song.show){
-      const isActive = activeSong === song.id;
       playlistEl.innerHTML += `
-              <tr class="${isActive ? 'active' : ''}">
+              <tr class="${song.active ? 'active' : ''}">
                 <td class="song-img">
                   <img src="${song.previewSrc}" alt="${song.artist} ${song.title}">
                 </td>

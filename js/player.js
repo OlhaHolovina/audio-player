@@ -282,10 +282,10 @@ function repaintSongs(songs){
             </tr>`;
   const atLeast1Song = songs.find(song => song.show);
   if (!atLeast1Song) {
-    playlistEl.innerHTML = `
-              <tr>
-                <td>No songs with this filter</td>
-              </tr>`
+  playlistEl.innerHTML = `
+            <tr>
+              <td>No songs with this filter</td>
+            </tr>`
     return;
   }
 
@@ -297,19 +297,19 @@ function repaintSongs(songs){
 
     if (song.show){
       playlistEl.innerHTML += `
-              <tr class="${song.active ? 'active' : ''}">
-                <td class="song-img">
-                  <img src="${song.previewSrc}" alt="${song.artist} ${song.title}">
-                </td>
-                <td class="song-artist">${song.artist}</td>
-                <td>${song.title}</td>
-                <td>${song.time}</td>
-                <td>${song.genre}</td>
-                <td>
-                  <!--<button type="button"><span class="material-icons">favorite_border</span></button>-->
-                  <button type="button"><span class="material-icons">favorite</span></button>
-                </td>
-              </tr>`;
+            <tr class="${song.active ? 'active' : ''}">
+              <td class="song-img">
+                <img src="${song.previewSrc}" alt="${song.artist} ${song.title}">
+              </td>
+              <td class="song-artist">${song.artist}</td>
+              <td>${song.title}</td>
+              <td>${song.time}</td>
+              <td>${song.genre}</td>
+              <td>
+                <!--<button type="button"><span class="material-icons">favorite_border</span></button>-->
+                <button type="button"><span class="material-icons">favorite</span></button>
+              </td>
+            </tr>`;
     }
   });
 }

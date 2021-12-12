@@ -149,6 +149,11 @@ const state = {
 
 // listeners
 function filterOnClick(e){
+  // it's a miss-click
+  if (!e.target.id) {
+    return;
+  }
+
   state.filters = state.filters.map(filter => {
     if (e.target.id === filter.id) {
       filter.active = true;
@@ -175,6 +180,10 @@ function filterOnClick(e){
 }
 
 function sortOnClick(e){
+  // it's a miss-click
+  if (!e.target.id) {
+    return;
+  }
   state.sorting = state.sorting.map(sortItem => {
     if (e.target.id === sortItem.id) {
       sortItem.active = true;

@@ -208,6 +208,7 @@ function playOnClick(e){
     return song;
   });
   repaintPlayer(state);
+  setActiveSong(state.songs, true);
 }
 
 // get all elements once
@@ -227,6 +228,7 @@ function initPlayer(){
   // todo input event listener
   state.songs[0].active = true;
   repaintPlayer(state);
+  setActiveSong(state.songs, false);
 }
 
 function showErrorMessage(message){
@@ -234,16 +236,17 @@ function showErrorMessage(message){
   console.error(message);
 }
 
-function setActiveSong(songs){
+function setActiveSong(songs, autoplay = false){
   const activeSong = songs.find(song => song.active);
   if (!activeSong) {
     showErrorMessage('something wrong with the songs list!');
   }
 
   audioEl.innerHTML = `
-      <source src="${activeSong.media}" type="audio/mpeg">
-      <p>Your browser doesn't support HTML5 audio. Here is a 
-      <a href="${activeSong.media}">link to the audio</a> instead.</p>
+      <audio controls class="audio" autoplay><source src="${activeSong.media}" type="audio/mpeg">
+        <p>Your browser doesn't support HTML5 audio. Here is a 
+        <a href="${activeSong.media}">link to the audio</a> instead.</p>
+      </audio>
   `;
 
   songHeader.innerHTML = `
@@ -262,7 +265,6 @@ function repaintPlayer(state){
   repaintFilters(state.filters);
   repaintSorting(state.sorting);
   repaintSongs(state.songs);
-  setActiveSong(state.songs);
   // todo add search
 }
 

@@ -255,6 +255,16 @@ function repaintSongs(songs){
               <th>genre</th>
               <th>favorite</th>
             </tr>`;
+  const atLeast1Song = songs.find(song => song.show);
+  if (!atLeast1Song) {
+    playlistEl.innerHTML = `
+              <tr>
+                <td>No songs with this filter</td>
+              </tr>`
+    return;
+  }
+
+
   songs.forEach(song => {
     // todo on click
     // todo set active class

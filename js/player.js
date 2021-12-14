@@ -148,6 +148,10 @@ const state = {
 }
 
 // listeners
+function sortSongsByDefault(songs){
+  return songs.sort((a, b) => a.artist.localeCompare(b.artist));
+}
+
 function filterOnClick(e){
   // it's a miss-click
   if (!e.target.id) {
@@ -202,8 +206,8 @@ function sortOnClick(e){
   repaintPlayer(state);
 }
 
-function sortSongsByDefault(songs){
-  return songs.sort((a, b) => a.artist.localeCompare(b.artist));
+function searchChange(e){
+
 }
 
 function playOnClick(e){
@@ -251,16 +255,20 @@ const filterEl = document.querySelector('.filters');
 const sortingEl = document.querySelector('.sorting');
 const playlistEl = document.querySelector('.playlist');
 const audioEl = document.querySelector('.audio');
-const songHeader = document.querySelector('.song-header');
-const filterResetButton = document.querySelector('#filters-reset');
-const sortingResetButton = document.querySelector('#sorting-reset');
+const songHeaderEl = document.querySelector('.song-header');
+const filterResetButtonEl = document.querySelector('#filters-reset');
+const sortingResetButtonEl = document.querySelector('#sorting-reset');
+const searchFormEl = document.querySelector('.search');
+const searchInputEl = document.querySelector('.search');
 
 // adding listeners
 filterEl.addEventListener('click', filterOnClick);
 sortingEl.addEventListener('click', sortOnClick);
 document.querySelector('.playlist').addEventListener('click', playOnClick);
-filterResetButton.addEventListener('click', filtersReset);
-sortingResetButton.addEventListener('click', sortingReset);
+filterResetButtonEl.addEventListener('click', filtersReset);
+sortingResetButtonEl.addEventListener('click', sortingReset);
+searchFormEl.addEventListener('click', sortingReset);
+searchInputEl.addEventListener('click', sortingReset);
 
 function initPlayer(){
   // todo request for songs
@@ -289,7 +297,7 @@ function setActiveSong(songs, autoplay = false){
       </audio>
   `;
 
-  songHeader.innerHTML = `
+  songHeaderEl.innerHTML = `
       <img src="${activeSong.songImgSrc}" alt="${activeSong.artist} ${activeSong.title}">
       <section class="song-info">
         <h2>

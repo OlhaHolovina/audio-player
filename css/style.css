@@ -2,6 +2,7 @@
   --blue: #12B2CB;
   --white: #fff;
   --grey: #cccbcb;
+  --white-gray: #EFEFEFFF;
 }
 
 body {
@@ -138,6 +139,11 @@ td.song-img img{
   font-size: 12px;
   text-transform: uppercase;
   font-weight: 100;
+  border-collapse: collapse;
+}
+
+.playlist tr:hover {
+  background: var(--white-gray);
 }
 
 .playlist td {
@@ -150,7 +156,8 @@ td.song-img img{
 }
 
 .playlist .active {
-  color: red;
+  border-left: 4px solid var(--blue);
+  background: var(--white-gray);
 }
 
 .playlist .material-icons {

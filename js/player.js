@@ -258,7 +258,35 @@ function sortingReset(){
 }
 
 function songEnd(e){
-  console.log(e)
+  const currentSongIndex = state.songs.findIndex(song => {
+    return song.active;
+  });
+
+  if (currentSongIndex === -1) {
+    return showErrorMessage('something wrong with the currentSong!');
+  }
+
+  let nextIndex;
+  // it's because index starts from 0
+  const maxIndex = state.songs.length - 1;
+
+  if(currentSongIndex === maxIndex) {
+    nextIndex = 0;
+  } else {
+    nextIndex = currentSongIndex + 1;
+  }
+
+  state.songs = state.songs.map((song, index) => {
+    if (index === nextIndex) {
+      console.log(song)
+      song.active = true;
+    } else {
+      song.active = false;
+    }
+    return song;
+  });
+// todo start player
+  repaintPlayer(state);
 }
 
 // get all elements once
@@ -283,7 +311,6 @@ searchInputEl.addEventListener('change', searchChange);
 
 function initPlayer(){
   // todo request for songs
-  // todo input event listener
   state.songs = sortSongsByDefault(state.songs);
   state.songs[0].active = true;
   repaintPlayer(state);

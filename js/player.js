@@ -390,7 +390,7 @@ function repaintSongs(songs){
   const atLeast1Song = songs.find(song => song.show);
   if (!atLeast1Song) {
   playlistEl.innerHTML = `
-            <tr>
+            <tr class="no-hover">
               <td>No songs with this filter</td>
             </tr>`
     return;

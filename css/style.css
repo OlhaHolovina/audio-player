@@ -146,6 +146,10 @@ td.song-img img{
   background: var(--white-gray);
 }
 
+.playlist tr.no-hover:hover {
+  background: none;
+}
+
 .playlist td {
   font-size: 16px;
   text-transform: capitalize;

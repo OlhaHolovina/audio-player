@@ -229,6 +229,10 @@ function filtersReset(){
     filter.active = false;
     return filter;
   });
+  state.songs = state.songs.map(song => {
+    song.show = true;
+    return song;
+  });
   repaintPlayer(state);
 }
 

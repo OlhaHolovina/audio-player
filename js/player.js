@@ -257,6 +257,9 @@ function sortingReset(){
   repaintPlayer(state);
 }
 
+function songEnd(e){
+  console.log(e)
+}
 
 // get all elements once
 const filterEl = document.querySelector('.filters');
@@ -299,7 +302,7 @@ function setActiveSong(songs, autoplay = false){
   }
 
   audioEl.innerHTML = `
-      <audio controls class="audio" autoplay><source src="${activeSong.media}" type="audio/mpeg">
+      <audio controls class="audio" id="audio-element" autoplay><source src="${activeSong.media}" type="audio/mpeg">
         <p>Your browser doesn't support HTML5 audio. Here is a 
         <a href="${activeSong.media}">link to the audio</a> instead.</p>
       </audio>
@@ -315,6 +318,15 @@ function setActiveSong(songs, autoplay = false){
         <h4 class="genre">${activeSong.genre}</h4>
       </section>
   `;
+
+  // we need to add a listener in the next tick, because in the current tick
+  // this component doesn't exist
+  // I found it there:
+  // https://javascript.info/event-loop
+  setTimeout(() => {
+    const audioEl = document.querySelector('#audio-element');
+    audioEl.addEventListener('ended', songEnd);
+  });
 }
 
 function repaintPlayer(state){

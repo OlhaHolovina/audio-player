@@ -6,6 +6,7 @@ There some functions for filters repainting, sorting repainting, set active song
 
 Resources:
 https://javascript.info/
+https://javascript.info/event-loop
 https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio#events
 
 design example

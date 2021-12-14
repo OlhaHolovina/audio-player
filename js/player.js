@@ -285,8 +285,9 @@ function songEnd(){
     }
     return song;
   });
-// todo start player
+
   repaintPlayer(state);
+  setActiveSong(state.songs, true);
 }
 
 // get all elements once
@@ -329,7 +330,7 @@ function setActiveSong(songs, autoplay = false){
   }
 
   audioEl.innerHTML = `
-      <audio controls class="audio" id="audio-element" autoplay><source src="${activeSong.media}" type="audio/mpeg">
+      <audio controls class="audio" id="audio-element"><source src="${activeSong.media}" type="audio/mpeg">
         <p>Your browser doesn't support HTML5 audio. Here is a 
         <a href="${activeSong.media}">link to the audio</a> instead.</p>
       </audio>
@@ -353,6 +354,10 @@ function setActiveSong(songs, autoplay = false){
   setTimeout(() => {
     const audioEl = document.querySelector('#audio-element');
     audioEl.addEventListener('ended', songEnd);
+
+    if (autoplay){
+      audioEl.play();
+    }
   });
 }
 

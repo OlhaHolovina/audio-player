@@ -334,6 +334,9 @@ function setActiveSong(songs, autoplay = false){
         <p>Your browser doesn't support HTML5 audio. Here is a 
         <a href="${activeSong.media}">link to the audio</a> instead.</p>
       </audio>
+      <span class="material-icons" id="next-button">
+        skip_next
+      </span>
   `;
 
   songHeaderEl.innerHTML = `
@@ -352,6 +355,11 @@ function setActiveSong(songs, autoplay = false){
   // I found it there:
   // https://javascript.info/event-loop
   setTimeout(() => {
+    // next button handlers
+    const nextButtonEl = document.querySelector('#next-button');
+    nextButtonEl.addEventListener('click', songEnd);
+
+    // audio elements handlers
     const audioEl = document.querySelector('#audio-element');
     audioEl.addEventListener('ended', songEnd);
 

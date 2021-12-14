@@ -207,7 +207,15 @@ function sortOnClick(e){
 }
 
 function searchChange(e){
-
+  state.songs = state.songs.map(song => {
+    if (song.artist.toLowerCase().includes(e.target.value.toLowerCase())) {
+      song.show = true;
+    } else {
+      song.show = false;
+    }
+    return song;
+  });
+  repaintPlayer(state);
 }
 
 function playOnClick(e){
@@ -259,7 +267,7 @@ const songHeaderEl = document.querySelector('.song-header');
 const filterResetButtonEl = document.querySelector('#filters-reset');
 const sortingResetButtonEl = document.querySelector('#sorting-reset');
 const searchFormEl = document.querySelector('.search');
-const searchInputEl = document.querySelector('.search');
+const searchInputEl = document.querySelector('#search');
 
 // adding listeners
 filterEl.addEventListener('click', filterOnClick);
@@ -267,8 +275,8 @@ sortingEl.addEventListener('click', sortOnClick);
 document.querySelector('.playlist').addEventListener('click', playOnClick);
 filterResetButtonEl.addEventListener('click', filtersReset);
 sortingResetButtonEl.addEventListener('click', sortingReset);
-searchFormEl.addEventListener('click', sortingReset);
-searchInputEl.addEventListener('click', sortingReset);
+searchFormEl.addEventListener('submit', (e) => e.preventDefault());
+searchInputEl.addEventListener('change', searchChange);
 
 function initPlayer(){
   // todo request for songs

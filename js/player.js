@@ -202,6 +202,10 @@ function sortOnClick(e){
   repaintPlayer(state);
 }
 
+function sortSongsByDefault(songs){
+  return songs.sort((a, b) => a.artist.localeCompare(b.artist));
+}
+
 function playOnClick(e){
   // it's click on something, not on the button
   if (e.target.className !== 'material-icons') {
@@ -220,21 +224,44 @@ function playOnClick(e){
   setActiveSong(state.songs, true);
 }
 
+function filtersReset(){
+  state.filters = state.filters.map(filter => {
+    filter.active = false;
+    return filter;
+  });
+  repaintPlayer(state);
+}
+
+function sortingReset(){
+  state.sorting = state.sorting.map(sortItem => {
+    sortItem.active = false;
+    return sortItem;
+  });
+  state.songs = sortSongsByDefault(state.songs);
+  repaintPlayer(state);
+}
+
+
 // get all elements once
 const filterEl = document.querySelector('.filters');
 const sortingEl = document.querySelector('.sorting');
 const playlistEl = document.querySelector('.playlist');
 const audioEl = document.querySelector('.audio');
 const songHeader = document.querySelector('.song-header');
+const filterResetButton = document.querySelector('#filters-reset');
+const sortingResetButton = document.querySelector('#sorting-reset');
 
 // adding listeners
 filterEl.addEventListener('click', filterOnClick);
 sortingEl.addEventListener('click', sortOnClick);
 document.querySelector('.playlist').addEventListener('click', playOnClick);
+filterResetButton.addEventListener('click', filtersReset);
+sortingResetButton.addEventListener('click', sortingReset);
 
 function initPlayer(){
   // todo request for songs
   // todo input event listener
+  state.songs = sortSongsByDefault(state.songs);
   state.songs[0].active = true;
   repaintPlayer(state);
   setActiveSong(state.songs, false);

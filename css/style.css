@@ -133,6 +133,7 @@ td.song-img img{
   width: 100%;
   text-align: left;
   font-family: 'Gothic A1', sans-serif;
+  border-collapse: collapse;
 }
 
 .playlist th {
@@ -173,6 +174,12 @@ td.song-img img{
   padding-left: 15px;
   padding-bottom: 15px;
   background: #F1F3F4;
+}
+
+.filters-wrapper .material-icons {
+  vertical-align: bottom;
+  color: var(--blue);
+  cursor: pointer;
 }
 
 .filters, .sorting {

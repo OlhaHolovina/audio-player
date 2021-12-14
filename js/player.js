@@ -257,7 +257,7 @@ function sortingReset(){
   repaintPlayer(state);
 }
 
-function songEnd(e){
+function songEnd(){
   const currentSongIndex = state.songs.findIndex(song => {
     return song.active;
   });
@@ -307,7 +307,7 @@ document.querySelector('.playlist').addEventListener('click', playOnClick);
 filterResetButtonEl.addEventListener('click', filtersReset);
 sortingResetButtonEl.addEventListener('click', sortingReset);
 searchFormEl.addEventListener('submit', (e) => e.preventDefault());
-searchInputEl.addEventListener('change', searchChange);
+searchInputEl.addEventListener('input', searchChange);
 
 function initPlayer(){
   // todo request for songs

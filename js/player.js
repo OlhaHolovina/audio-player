@@ -360,7 +360,6 @@ function repaintPlayer(state){
   repaintFilters(state.filters);
   repaintSorting(state.sorting);
   repaintSongs(state.songs);
-  // todo add search
 }
 
 function repaintFilters(filters){

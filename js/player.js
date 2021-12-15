@@ -400,10 +400,6 @@ function repaintSongs(songs){
 
 
   songs.forEach(song => {
-    // todo on click
-    // todo set active class
-    // todo set is favorite
-
     if (song.show){
       playlistEl.innerHTML += `
             <tr class="${song.active ? 'active' : ''}">

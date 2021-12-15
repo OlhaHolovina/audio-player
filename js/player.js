@@ -23,7 +23,6 @@ const state = {
       title: 'Believer',
       time: '3: 23',
       genre: 'Rock, Alternative rock',
-      favorite: false,
       active: false,
       show: true
     },
@@ -49,7 +48,6 @@ const state = {
       title: 'Radioactive',
       time: '3: 08',
       genre: 'Rock, Alternative rock',
-      favorite: false,
       active: false,
       show: true,
     },
@@ -62,7 +60,6 @@ const state = {
       title: 'I putt a spell on you',
       time: '3: 35',
       genre: 'Rock',
-      favorite: false,
       active: false,
       show: true,
     },
@@ -75,7 +72,6 @@ const state = {
       title: 'Wien',
       time: '3: 38',
       genre: 'Dubstep, electronic',
-      favorite: false,
       active: false,
       show: true,
     },
@@ -88,7 +84,6 @@ const state = {
       title: 'Somebody told me',
       time: '3: 21',
       genre: 'Rock, Pop Rock',
-      favorite: false,
       active: false,
       show: true,
     },
@@ -101,7 +96,6 @@ const state = {
       title: 'Good time',
       time: '3: 30',
       genre: 'Rock',
-      favorite: false,
       active: false,
       show: true,
     },
@@ -114,7 +108,6 @@ const state = {
       title: 'Life... I feel you',
       time: '3: 49',
       genre: 'Ambient, electronic',
-      favorite: false,
       active: false,
       show: true,
     },
@@ -127,7 +120,6 @@ const state = {
       title: 'What\'s coming',
       time: '4: 26',
       genre: 'Ambient, electronic',
-      favorite: false,
       active: false,
       show: true,
     },
@@ -140,7 +132,6 @@ const state = {
       title: 'Karelia',
       time: '6: 41',
       genre: 'Ambient, instrumental',
-      favorite: false,
       active: false,
       show: true,
     },
@@ -278,7 +269,6 @@ function songEnd(){
 
   state.songs = state.songs.map((song, index) => {
     if (index === nextIndex) {
-      console.log(song)
       song.active = true;
     } else {
       song.active = false;

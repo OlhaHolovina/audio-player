@@ -25,6 +25,10 @@ body {
   text-decoration: none;
 }
 
+.logo img {
+  width: 200px;
+}
+
 /*search*/
 .search {
   padding-right: 150px;
@@ -267,5 +271,9 @@ ul.filters {
 
   .player audio {
     width: 400px;
+  }
+
+  .search {
+    padding-right: 15px;
   }
 }

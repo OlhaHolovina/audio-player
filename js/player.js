@@ -54,8 +54,8 @@ const state = {
     {
       id: '4',
       media: 'https://raw.githubusercontent.com/OlhaHolovina/audio-player/main/media/tim-curry-I-put-a-spell-on-you.mp3',
-      previewSrc: 'https://raw.githubusercontent.com/OlhaHolovina/audio-player/main/img/preview/tim-curry-you-cover.jpg',
-      songImgSrc: 'https://raw.githubusercontent.com/OlhaHolovina/audio-player/main/img/main/tim-curry-spell-on-you-pict.jpg',
+      previewSrc: 'img/preview/tim-curry-you-cover.jpg',
+      songImgSrc: 'img/main/tim-curry-spell-on-you-pict.jpg',
       artist: 'Tim Curry',
       title: 'I putt a spell on you',
       time: '3: 35',
@@ -90,8 +90,8 @@ const state = {
     {
       id: '7',
       media: 'https://raw.githubusercontent.com/OlhaHolovina/audio-player/main/media/leroy-good time.mp3',
-      previewSrc: 'https://raw.githubusercontent.com/OlhaHolovina/audio-player/main/img/preview/leroy-good-time-cover.jpg',
-      songImgSrc: 'https://raw.githubusercontent.com/OlhaHolovina/audio-player/main/img/main/leroy-good-time-pict.jpg',
+      previewSrc: 'img/preview/leroy-good-time-cover.jpg',
+      songImgSrc: 'img/main/leroy-good-time-pict.jpg',
       artist: 'Leroy',
       title: 'Good time',
       time: '3: 30',

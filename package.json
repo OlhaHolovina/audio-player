@@ -1,0 +1,21 @@
+{
+  "name": "cypress-practice",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "http-server index.html",
+    "test": "cypress run",
+    "cypress": "cypress run",
+    "cypress:open": "cypress open"
+  },
+  "keywords": [],
+  "author": "Olha Holovina",
+  "license": "ISC",
+  "dependencies": {
+    "http-server": "^0.12.3"
+  },
+  "devDependencies": {
+    "cypress": "^7.1.0"
+  }
+}

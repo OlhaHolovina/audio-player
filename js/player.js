@@ -194,8 +194,8 @@ function setActiveSong(songs, autoplay = false){
       </section>
   `;
 
-  // we need to add a listener in the next tick, because in the current tick
-  // this component doesn't exist
+  // we need to add a listener in the next tick,
+  // because in the current loop tick this component doesn't exist
   // I found it there:
   // https://javascript.info/event-loop
   setTimeout(() => {

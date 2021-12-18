@@ -43,7 +43,7 @@ export function repaintSongs(songs, playlistEl){
               <td>${song.title}</td>
               <td>${song.time}</td>
               <td>${song.genre}</td>
-              <td><span class="material-icons" id="${song.id}">play_circle</span></td>
+              <td><span class="material-icons next-song-button" id="${song.id}">play_circle</span></td>
             </tr>`;
     }
   });

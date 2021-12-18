@@ -1,5 +1,12 @@
 # Audio Player
 
+- Current song playing, with controls
+- Playlist of all songs to play
+- Functionality for play and pause, as well as volume control
+- Player will advance to the next track when a song/podcast is complete
+- Player will loop back to the start of the playlist when the final song is complete
+- Tracks in playlist can be sorted and filtered
+
 main idea: create a state variable where we can store all filters data, sorting data, songs, active songs
 The most important function is 'repaintPlayer'. It rebuilds the whole player depends on the state variable
 There some functions for filters repainting, sorting repainting, set active song

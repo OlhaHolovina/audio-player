@@ -15,6 +15,9 @@ Resources:
 https://javascript.info/
 https://javascript.info/event-loop
 https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio#events
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/localeCompare
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules
+https://forum.freecodecamp.org/t/modules-pattern-es6-browser-cant-find-a-file-path/315998
 
 design example
 https://xd.adobe.com/view/843aa459-7a6d-407e-b890-dc8b2253e600-d169/specs/
